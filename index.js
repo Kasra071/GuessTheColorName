@@ -11,8 +11,9 @@ var rightAnwserIndex
 var interval
 var timerTime = 10;
 
+var score
 function StartUp(){
-    let score = localStorage.getItem('score');
+    score = localStorage.getItem('score');
     if(score==null || score == undefined){
         score = 0;
         localStorage.setItem('score',0)
@@ -20,9 +21,30 @@ function StartUp(){
     document.getElementById('ScoreShower').textContent = "score : " + score
     ChangeCode('Rgb')
     ChangeDiff('Normal')
+    scrollToTop()
 }
 StartUp()
 
+function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
+  function scrollToElementTop(elementId) {
+    const element = document.getElementById(elementId);
+    const headerHeight = 80; // Replace this with the height of your header if you have one
+  
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = window.scrollY + elementPosition - headerHeight;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth' // Optional: Add smooth scrolling effect
+      });
+    }
+  }
+
+  
 
 function ChangeCode(code){
     CodeToShow = code
@@ -84,8 +106,10 @@ function CheckForRange(element){
 }
 
 function Play(){
+    document.querySelector('.StartLevelContainer').style.display = "none"
     ColorsListRgb = []
     ColorsListHex = []
+    timerTime = 10;
 
     let ColorsHtml = ""
 
@@ -126,22 +150,65 @@ function Play(){
     document.getElementById('PlayContainer').innerHTML = `
         <span class="PlayTitle" >which color is this code showing:</span>
         <span class="PlayTitle" >${TextToShow} : </span>
+        <span class="PlayTitle" id="Timer" >Time Remaining: 10</span>
+        <span class="PlayTitle" id="WinLoseShow"></span>
         <div class="ColorsContainer">
             ${ColorsHtml}
         </div> 
     `
+
+    interval = setInterval(() => {
+        timerTime--
+        document.getElementById('Timer').textContent = "Time Remaining: " + timerTime;
+        if(timerTime == 0){
+            clearInterval(interval)
+            Clicked(-1)
+        }
+    }, 1000);
+
+    scrollToElementTop('PlayContainer')
 }
 
 function Clicked(n){
+    document.querySelectorAll('.ColorShower').forEach(item=>{
+        item.setAttribute('onclick',"")
+        item.style.cursor = "default"
+    })
+    let span = document.getElementById('WinLoseShow')
+    clearInterval(interval)
     document.querySelectorAll('.ColorShower span').forEach(item=>{
         item.style.display = "block"
     })
 
     if(n == rightAnwserIndex){
-        console.log('win')
+        span.style.color = "green"
+        span.textContent = "You Won! Added " + ColorsToShow + " Score(s) to you :D !";
+        score = parseInt(score) + parseInt(ColorsToShow)
+        localStorage.setItem('score',score)
+        document.getElementById('ScoreShower').textContent = "score : " + score
     }else{
-        console.log('lose')
+        span.style.color = "red"
+        span.textContent = "You Lost! Maybe Next Time ;)"
     }
+
+    let div = document.createElement('div');
+    div.className = "EndGameBtns"
+    div.innerHTML = `
+        <button onclick="Play()">PLAY AGAIN</button>
+        <button onclick="Exit()">EXIT</button>
+    `
+    document.getElementById('PlayContainer').appendChild(div)
+}
+
+function Exit(){
+    document.getElementById('PlayContainer').innerHTML = `
+
+    `
+    setTimeout(()=>{
+        scrollToTop()
+
+    },100)
+    document.querySelector('.StartLevelContainer').style.display = "block"
 }
 
 function componentToHex(c) {

@@ -74,8 +74,8 @@ h3 a{
     width: 400px;
     height: fit-content;
     border-radius: 20px;
-    border: 1px solid yellow;
-    box-shadow: 0 0 10px yellow;
+    border: 1px solid cyan;
+    box-shadow: 0 0 10px cyan;
     margin: auto;
     margin-top: 20px;
     padding: 30px;
@@ -165,7 +165,7 @@ h3 a{
 
    .PlayContainer{
     margin: auto;
-    margin-top: 100px;
+    margin-top: 200px;
     max-width: 1000px;
     width: 100%;
    }
@@ -185,7 +185,7 @@ h3 a{
     margin-top: 20px;
    }
 
-   .ColorsContainer div{
+   .ColorsContainer .ColorShower{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -198,13 +198,29 @@ h3 a{
     transition: 0.2s all;
    }
 
-   .ColorsContainer div:hover{
+   .ColorsContainer .ColorShower:hover{
     box-shadow: 0 0 10px white;
    }
 
-   .ColorsContainer div span{
+   .ColorsContainer .ColorShower span{
         width: 100%;
         font-size: 20px;
         text-align: center;
         display: none;
+    }
+
+    .EndGameBtns{
+        margin-top: 10px;
+    }
+
+    .EndGameBtns button{
+        display: block;
+        margin: auto;
+        margin-top: 15px;
+        padding: 10px 25px;
+        border-radius: 15px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 10px white;
     }
