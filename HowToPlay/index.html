@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kasra071 - Guess the color game - Toturial</title>
+        <link rel="stylesheet" href="../index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="icon" href="../icon.png">
+        <meta charset="UTF-8">
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+
+        <h1>Guess the color game - Toturial</h1>
+        <h3>Back to the <a href="../index.html">Game</a></h3>
+
+        
+        <div class="HowToPlayContainer">
+            <div class="LanguageSelect">
+                <div id="en-lang-btn" onclick="ChangeLanguage('en',this)" class="activeLang">en</div>
+                <div onclick="ChangeLanguage('fa',this)">fa</div>
+            </div>
+
+
+            <div id="EN">
+                <h2>How to Play</h2>
+                <h4>Objective:</h4>
+                <p>The aim of Color Code Challenge is to match a randomly generated RGB color code to its corresponding color among a set of options. You will be presented with a color code in the format RGB(r, g, b) and your task is to identify the color that matches that code.</p>
+                <h4>RGB Color Code:</h4>
+                <p>RGB stands for Red, Green, Blue - the primary colors used in digital displays. Each color channel is represented by a number from 0 to 255. For example, RGB(12, 167, 200) indicates a color composed of 12 units of red, 167 units of green, and 200 units of blue.</p>
+                <h4>How to Identify Colors:</h4>
+                <p>To play the game, you need to be able to recognize colors based on their RGB components. Here's a simple guide to get you started:</p>
+                <p><b>Red (R):</b> Higher R value with lower G and B values will create shades of red.</p>
+                <p><b>Green (G):</b>Higher G value with lower R and B values will create shades of green.</p>
+                <p><b>Blue (B):</b> Higher B value with lower R and G values will create shades of blue.</p>
+                <p><b>Mixing Colors:</b> Combining different R, G, and B values will result in a wide range of colors.</p>
+                <h4>Choosing Between HEX and RGB:</h4>
+                <p>You have the option to display color codes in either HEX or RGB format. HEX codes are alphanumeric codes representing colors, while RGB uses numeric values. Select the format that you are more comfortable with.</p>
+                <h4>Adjusting Difficulty:</h4>
+                <p>The game lets you choose the number of colors displayed as options. Higher color counts increase the difficulty. Start with a lower number of colors and gradually increase the challenge as you improve your color-matching skills.</p>
+                <h4>How to Play (Step-by-Step):</h4>
+                    <p>1. Read the RGB color code displayed on the screen (e.g., RGB(12, 167, 200)).</p>
+                    <p>2. Observe the set of colors shown below the code.</p>
+                    <p>3. Identify the color that matches the given RGB code.</p>
+                    <p>4. Select the correct color by clicking on it.</p>
+                    <p>5. If your choice is correct, you advance to the next round. Otherwise, try again until you succeed.</p>
+                <p><b>Remember: </b>Practice makes perfect! Keep playing to hone your color recognition abilities and become a master of the Color Code Challenge.</p>    
+            </div>
+            <div id="FA">
+                <h2>نحوه بازی: چالش کد رنگ</h2>
+                <h4>هدف:</h4>
+                <p>هدف از بازی چالش کد رنگ، اتصال یک کد رنگ RGB تصادفی به رنگ مربوطه‌اش در میان گزینه‌های داده‌شده است. یک کد رنگ به شما ارائه می‌شود که به صورت RGB(r, g, b) نمایش داده می‌شود و وظیفه شما شناسایی رنگی است که با آن کد تطابق دارد.</p>
+                <h4>کد رنگ RGB:</h4>
+                <p>RGB مخفف Red، Green، Blue می‌باشد که رنگ‌های اولیه استفاده شده در نمایشگرهای دیجیتال هستند. هر کانال رنگ به عددی از 0 تا 255 نمایش داده می‌شود. به عنوان مثال، RGB(12, 167, 200) رنگی را نمایش می‌دهد که از 12 واحد قرمز، 167 واحد سبز و 200 واحد آبی تشکیل شده است.</p>
+                <h4>شناسایی رنگ‌ها:</h4>
+                <p>برای بازی کردن، شما باید بتوانید رنگ‌ها را بر اساس اجزای RGB آن‌ها شناسایی کنید. اینجا یک راهنمای ساده برای شروع بازی آمده است:</p>
+                <p><b>قرمز (R):</b> مقدار بالاتر R با مقادیر پایینتر G و B، نقاط قرمزی ایجاد می‌کند.</p>
+                <p><b>سبز (G):</b> مقدار بالاتر G با مقادیر پایینتر R و B، نقاط سبزی ایجاد می‌کند.</p>
+                <p><b>آبی (B):</b> مقدار بالاتر B با مقادیر پایینتر R و G، نقاط آبی ایجاد می‌کند.</p>
+                <p><b>ترکیب رنگ‌ها: </b>  ترکیب مقادیر مختلف R، G و B، باعث ایجاد طیف گسترده‌ای از رنگ‌ها می‌شود.</p>
+                <h4>انتخاب بین کد HEX و RGB:</h4>
+                <p>شما دارای گزینه‌ای هستید تا کدهای رنگ را به صورت HEX یا RGB نمایش دهید. کدهای HEX کدهای الفبایی عددی هستند که رنگ‌ها را نمایش می‌دهند، در حالی که RGB از مقادیر عددی استفاده می‌کند. فرمتی را انتخاب کنید که با آن آشنایی دارید.</p>
+                <h4>تنظیم سختی:</h4>
+                <p>این بازی به شما اجازه می‌دهد تعداد رنگ‌های نمایش داده‌شده به عنوان گزینه‌ها را انتخاب کنید. تعداد رنگ‌های بیشتر موجب افزایش سختی می‌شود. با تعداد کمتری رنگ شروع کنید و با بهبود مهارت‌های تطبیق رنگ‌ها، تدریجی سختی را افزایش دهید.</p>
+                <h4>نحوه بازی (مراحله به مرحله):</h4>
+                <ol>
+                    <p> 1. کد رنگ RGB نمایش‌داده‌شده را روی صفحه بخوانید (به عنوان مثال، RGB(12، 167، 200)).</p>
+                    <p> 2. مجموعه‌ای از رنگ‌ها را که زیر کد نمایش داده‌شده است، مشاهده کنید.</li>
+                    <p> 3. رنگی را که با کد RGB داده‌شده تطابق دارد، شناسایی کنید.</p>
+                    <p> 4. رنگ صحیح را با کلیک بر روی آن انتخاب کنید.</p>
+                    <p> 5. اگر انتخاب شما صحیح باشد، به مرحله بعدی پیش خواهید رفت. در غیر اینصورت، تا موفقیت ادامه دهید.</p>
+                </ol>
+                <p><b>یادآوری: </b> تمرین باعث پیشرفت می‌شود! به بازی کردن ادامه دهید تا توانایی‌های تشخیص رنگ خود را بهبود بخشید و به استاد چالش کد رنگ تبدیل شوید</p>    
+            </div>
+        </div>
+
+        <footer>
+            <span>Source Code in <a href="https://github.com/Kasra071/GuessTheColorGame">my github</a></span>
+        </footer>
+
+
+
+
+
+
+    </body>
+</html>

@@ -47,6 +47,15 @@ h1{
     margin-top: 10px;
 }
 
+h2{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+h2 a{
+    color: cyan;
+}
+
 h3{
     text-align:center;
 }
@@ -308,4 +317,136 @@ h1{
     top: -25px;
 }
 
+    }
+
+
+    .HowToPlayContainer{
+        max-width: 1200px;
+        font-size: 20px;
+        background-color: rgb(240, 240, 240);
+        margin: auto;
+        margin-top: 20px;
+        color: black;
+        padding: 20px;
+        padding-top: 5px;
+        border-radius: 20px;
+        position: relative;
+        font-family: SourceCode,iransans;
+        line-height: 33px;
+    }
+
+    @media only screen and (max-width:1248px) {
+        .HowToPlayContainer{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
+
+    .HowToPlayContainer h2{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .HowToPlayContainer h4{
+        font-size: 22px;
+    }
+
+    .HowToPlayContainer p , .HowToPlayContainer li{
+        font-size: 18px;
+    }
+
+
+    #FA{
+        direction: rtl;
+        text-align: right;
+    }
+
+
+    .LanguageSelect{
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        width: 75px;
+        height: 25px;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+    
+       }
+       .LanguageSelect div{
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        cursor: pointer;
+        user-select: none;
+       }
+       .LanguageSelect div:first-child{
+        border-left: 1px solid gray;
+       }
+       .LanguageSelect .activeLang{
+        background-color: #bbb;
+       }
+
+       
+    @media only screen and (max-width:750px) {
+        .HowToPlayContainer h2{
+            font-size: 25px;
+            margin-bottom: 45px;
+        }
+    
+        .HowToPlayContainer h4{
+            font-size: 20px;
+        }
+    
+        .HowToPlayContainer p , .HowToPlayContainer li{
+            font-size: 16px;
+        }
+        .LanguageSelect{
+            right: unset;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 65px;
+
+        }
+
+        .HowToPlayContainer{
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    @media only screen and (max-width:500px) {
+        .HowToPlayContainer h2{
+            font-size: 22px;
+        }
+    
+        .HowToPlayContainer h4{
+            font-size: 18px;
+        }
+    
+        .HowToPlayContainer p , .HowToPlayContainer li{
+            font-size: 15px;
+        }
+    }
+
+    @media only screen and (max-width:420px) {
+        .HowToPlayContainer h2{
+            font-size: 19px;
+        }
+    
+        .HowToPlayContainer h4{
+            font-size: 16px;
+        }
+    
+        .HowToPlayContainer p , .HowToPlayContainer li{
+            font-size: 13px;
+        }
     }
