@@ -103,6 +103,7 @@ function CheckForRange(element){
         element.value = 100;
     }
     document.getElementById('ColorShow').textContent = "Colors : " + element.value;
+    ColorsToShow = parseInt(element.value)
 }
 
 function Play(){
